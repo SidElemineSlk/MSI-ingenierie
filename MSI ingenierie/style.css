@@ -1,20 +1,20 @@
-/* Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-
-/* The Hero Section with Background Image */
-.hero {
-    height: 100vh; /* Full screen height */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('backgroud.jpeg'); /* This creates the dark overlay */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+/* =========================================
+   1. GENERAL RESET & BASE STYLES
+   ========================================= */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Arial, sans-serif; 
 }
 
-/* Navbar Styling */
+body {
+    background-color: #f8f9fa;
+}
+
+/* =========================================
+   2. NAVIGATION BAR
+   ========================================= */
 .navbar {
     position: absolute;
     top: 0;
@@ -23,95 +23,24 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background: transparent; /* Makes it see-through */
-    z-index: 10;
+    background: transparent;
+    z-index: 100;
 }
 
-.nav-links { list-style: none; display: flex; gap: 20px; }
-.nav-links a { text-decoration: none; color: white; font-weight: 500; }
-
-/* Buttons */
-.btn-outline {
-    border: 2px solid white;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px;
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 20px; 
+    align-items: center;
 }
 
-.btn-filled {
-    background-color: #222; /* Dark button like image */
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
+.nav-links a { 
+    text-decoration: none; 
+    color: white; 
+    font-weight: 500; 
 }
 
-.hero-content {
-    max-width: 800px;
-    background: rgba(0, 0, 0, 0.4); /* The darker box behind the text */
-    padding: 40px;
-    border-radius: 10px;
-}
-
-h1 { font-size: 3rem; margin-bottom: 20px; color: #d4af37; /* Gold color */ }
-
-/* --- MOBILE RESPONSIVE STYLES --- */
-@media (max-width: 768px) {
-    
-    /* 1. Stack the Navbar vertically */
-    .navbar {
-        flex-direction: column; /* Stacks logo, menu, and button */
-        padding: 20px;
-        background-color: rgba(94, 94, 94, 0.574); /* Dark background for readability */
-        position: relative; /* No longer floating over image on mobile */
-    }
-
-    /* 2. Adjust the Menu Links */
-    .nav-links {
-        flex-direction: column; /* Stacks links vertically */
-        gap: 15px;
-        margin: 20px 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    /* 3. Adjust the Hero Section Text */
-    .hero {
-        height: auto; /* Allow height to grow if text is long */
-        min-height: 100vh;
-        padding-top: 20px; /* Space for the stacked navbar */
-    }
-
-    .hero-content {
-        width: 90%; /* Take up 90% of screen width */
-        padding: 20px; /* Less padding */
-        margin-top: 20px;
-    }
-
-    /* 4. Make Fonts Smaller */
-    h1 {
-        font-size: 2rem; /* Smaller title for mobile */
-    }
-    
-    p {
-        font-size: 1rem;
-    }
-
-    /* 5. Make Buttons Full Width */
-    .btn-outline, .btn-filled {
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    
-    /* --- HAMBURGER MENU STYLES --- */
-
-/* 1. Style the Hamburger Icon (Hidden on Desktop) */
+/* Hamburger Icon (Hidden on Desktop) */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -123,47 +52,370 @@ h1 { font-size: 3rem; margin-bottom: 20px; color: #d4af37; /* Gold color */ }
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background-color: white; /* Color of the lines */
+    background-color: white;
 }
 
-/* --- MOBILE RESPONSIVENESS --- */
+/* =========================================
+   3. HERO SECTION (Home Page)
+   ========================================= */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('backgroud.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.4); 
+    padding: 40px;
+    border-radius: 10px;
+}
+
+h1 { font-size: 3rem; margin-bottom: 20px; color: #d4af37; }
+
+/* =========================================
+   4. SERVICES PAGE SPECIFIC
+   ========================================= */
+.page-header {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('backgroud.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}
+
+.services-section {
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #7a7a6e;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+/* The Square Grid */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    aspect-ratio: 1 / 1; /* FORCES SQUARE */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.card-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border-color: #d4af37;
+}
+
+.service-card .icon { font-size: 3.5rem; margin-bottom: 20px; }
+.service-card h3 { font-size: 1.15rem; color: #333; line-height: 1.4; }
+
+/* =========================================
+   5. BUTTONS
+   ========================================= */
+.btn-outline {
+    border: 2px solid white;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-filled {
+    background-color: #222;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+
+
+/* =========================================
+   6. PROJECTS PAGE STYLES
+   ========================================= */
+/* --- PROJECTS PAGE STYLES --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    background: #000;
+}
+
+.project-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    opacity: 0.9;
+}
+
+/* The Overlay containing project data */
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.2) 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    transition: background 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-overlay h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #d4af37; /* Gold Accent */
+    border-left: 4px solid #d4af37;
+    padding-left: 15px;
+}
+
+.project-details {
+    list-style: none;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.project-details li strong {
+    color: #bbb;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+/* Responsive Mobile view */
 @media (max-width: 768px) {
-    .hamburger {
-        display: block; /* Show hamburger on mobile */
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0; /* Hide middle line when clicked */
+    
+    .project-image img {
+        height: 350px;
     }
+}
 
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg); /* Turn first line to X */
+
+/* =========================================
+   7. ABOUT PAGE STYLES (Mobile/Tablets)
+   ========================================= */
+
+
+/* --- ABOUT PAGE STYLES --- */
+
+.about-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Texte large, Sidebar étroite */
+    gap: 50px;
+    align-items: start;
+}
+
+.about-text h2 {
+    color: #d4af37; /* Couleur dorée MSI */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* Badges de valeurs */
+.badges {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.badge {
+    background: #f0f0f0;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #7a7a6e;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+}
+
+/* Barre latérale de contact */
+.contact-sidebar {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 5px solid #d4af37;
+}
+
+.contact-sidebar h3 {
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-item .icon {
+    font-size: 1.5rem;
+    background: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    color: #d4af37;
+}
+
+.btn-whatsapp {
+    display: block;
+    text-align: center;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 850px) {
+    .about-container {
+        grid-template-columns: 1fr; /* Une seule colonne sur tablette/mobile */
     }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg); /* Turn last line to X */
+    
+    .about-text {
+        text-align: center;
     }
+    
+    .badges {
+        justify-content: center;
+    }
+}
 
-    /* 2. Hide the Menu off-screen by default */
+
+/* =========================================
+   8. RESPONSIVE DESIGN (Mobile/Tablets)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Navbar to Hamburger */
+    .hamburger { display: block; }
+    
     .nav-links {
         position: fixed;
-        left: -100%; /* Push menu 100% off the screen to the left */
-        top: 70px; /* Push it down below the navbar */
-        gap: 0;
+        left: -100%;
+        top: 0;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.95); /* Very dark background */
+        background-color: rgba(0, 0, 0, 0.95);
         width: 100%;
-        text-align: center;
-        transition: 0.3s; /* Smooth slide effect */
+        height: 100vh;
+        justify-content: center;
+        transition: 0.3s;
     }
 
-    .nav-links li {
-        margin: 16px 0;
-    }
+    .nav-links.active { left: 0; }
 
-    /* 3. The class that JS will add to show the menu */
-    .nav-links.active {
-        left: 0; /* Bring it back to center */
-    }
+    /* Hero Text Adjustments */
+    h1 { font-size: 2rem; }
+    .hero-content { width: 90%; padding: 20px; }
 }
+
+@media (max-width: 600px) {
+    /* Services Grid: 2 per row on phones */
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .service-card { padding: 15px; }
+    .service-card h3 { font-size: 0.85rem; }
+    .service-card .icon { font-size: 2rem; }
+
+
 }

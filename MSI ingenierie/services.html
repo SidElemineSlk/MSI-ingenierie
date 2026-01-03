@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Services -MSI</title>
+</head>
+<body>
+        <nav class="navbar">
+         <div class="logo">
+                <img src="MSI logo.jpeg" alt="MSI Logo" style="height:80px;">
+        </div>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="Index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="about.html">À propos de nous</a></li>
+    </ul>
+    </nav>
+
+
+    <header class="page-header">
+        
+        <h1>NOS SERVICES</h1>
+        
+    </header>
+
+    <section class="services-section">
+        <div class="services-container">
+            <div class="service-card">
+                <div class="card-inner">
+                    <div class="icon">📐</div>
+                    <h3>Études techniques et dossiers d'exécution</h3>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-inner">
+                    <div class="icon">🏢</div>
+                    <h3>Conception architecturale (2D & 3D)</h3>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-inner">
+                    <div class="icon">📋</div>
+                    <h3>Relevé de structures sur site et reproduction des plans existants</h3>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-inner">
+                    <div class="icon">🏗️</div>
+                    <h3>Suivi de Travaux de Construction et de Réhabilitation</h3>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-inner">
+                    <div class="icon">📊</div>
+                    <h3>Estimation des coûts & métrés</h3>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-inner">
+                    <div class="icon">🏠</div>
+                    <h3>Décoration & design d'intérieur</h3>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-inner">
+                    <div class="icon">🤝</div>
+                    <h3>Conseil technique & accompagnement</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

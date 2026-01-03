@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>À propos de nous - MSI Ingénierie</title>
+</head>
+<body>
+
+    <nav class="navbar">
+            <div class="logo">
+                <img src="MSI logo.jpeg" alt="MSI Logo" style="height:50px;">
+            </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projets</a></li>
+            <li><a href="about.html" class="active-link">À propos</a></li>
+        </ul>
+        
+    </nav>
+
+    <header class="page-header">
+        <h1>À PROPOS DE NOUS</h1>
+        <p>Expertise et Innovation en Ingénierie du Bâtiment</p>
+    </header>
+
+    <section class="about-section">
+        <div class="about-container">
+            
+            <div class="about-text">
+                <h2>Bureau d'études et de contrôle technique</h2>
+                <p>
+                    <strong>MSI Ingénierie</strong> est un bureau d'études spécialisé dans le secteur du bâtiment et du génie civil. 
+                    Basé à Nouakchott, nous accompagnons nos clients à travers toutes les étapes de leurs projets de construction, 
+                    de la conception technique initiale au contrôle de l'exécution sur site.
+                </p>
+                <p>
+                    Notre mission est de garantir la sécurité, la durabilité et l'optimisation des coûts de vos structures 
+                    grâce à une approche rigoureuse et l'utilisation d'outils de modélisation avancés.
+                </p>
+                
+                <div class="badges">
+                    <span class="badge">Qualité</span>
+                    <span class="badge">Précision</span>
+                    <span class="badge">Innovation</span>
+                </div>
+            </div>
+
+            <div class="contact-sidebar">
+                <h3>Contactez-nous</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📍</span>
+                        <p>Tvz - Nouakchott - Mauritanie</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📞</span>
+                        <p><a href="tel:+22236613305">+222 36 61 33 05</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">✉️</span>
+                        <p><a href="mailto:msi.ingenierie25@gmail.com">msi.ingenierie25@gmail.com</a></p>
+                    </div>
+                </div>
+                <a href="https://wa.me/22236613305" class="btn-whatsapp">Nous contacter sur WhatsApp</a>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-links li a").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+    </script>
+
+</body>
+</html>

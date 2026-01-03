@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Nos Projets - MSI Ingénierie</title>
+</head>
+<body>
+
+    <nav class="navbar">
+            <div class="logo">
+                <img src="MSI logo.jpeg" alt="MSI Logo" style="height:80px;">
+            </div>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+        <ul class="nav-links">
+        <li><a href="Index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="about.html">À propos de nous</a></li>
+    </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>NOS RÉALISATIONS</h1>
+        <p>Découvrez notre expertise à travers nos projets récents à Nouakchott.</p>
+    </header>
+
+    <section class="projects-grid">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="batiment1.png" alt="Bâtiment R+1 à NKTT">
+                <div class="project-overlay">
+                    <h2>BÂTIMENT R+1 À NKTT</h2>
+                    <ul class="project-details">
+                        <li><strong>Client:</strong> Client privé</li>
+                        <li><strong>Localisation:</strong> Nouakchott - Mauritanie</li>
+                        <li><strong>Superficie:</strong> 10x15 m²</li>
+                        <li><strong>Tache:</strong> Architecture</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="batiment2.png" alt="Villa Moderne R+1">
+                <div class="project-overlay">
+                    <h2>VILLA MODERNE R+1</h2>
+                    <ul class="project-details">
+                        <li><strong>Client:</strong> Client privé</li>
+                        <li><strong>Localisation:</strong> Nouakchott - Mauritanie</li>
+                        <li><strong>Superficie:</strong> 18x20 m²</li>
+                        <li><strong>Tache:</strong> Architecture et structure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="batiment3.png" alt="Bâtiment R+1 Résidentiel">
+                <div class="project-overlay">
+                    <h2>BÂTIMENT R+1 RÉSIDENTIEL</h2>
+                    <ul class="project-details">
+                        <li><strong>Client:</strong> Client privé</li>
+                        <li><strong>Localisation:</strong> Nouakchott - Mauritanie</li>
+                        <li><strong>Superficie:</strong> 12x15 m²</li>
+                        <li><strong>Tache:</strong> Architecture et structure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+    </script>
+
+</body>
+</html>
